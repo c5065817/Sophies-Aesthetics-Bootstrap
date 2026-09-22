@@ -1,0 +1,2010 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="Sophie's Aesthetics - nurse-led aesthetic consultations, treatments and aftercare.">
+
+    <title>Sophie's Aesthetics | Bootstrap Version</title>
+
+
+    <!--
+        Bootstrap 5.3 CSS loaded from the official CDN.
+        This provides the majority of the layout, responsive
+        design, form and component styling used by this project.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <!--
+        Only a small amount of custom CSS is used.
+        Bootstrap is used wherever practical, as required
+        by the framework exercise.
+    -->
+    <style>
+        :root {
+            --brand-dark: #303535;
+            --brand-accent: #846d5c;
+            --brand-light: #f6f2ee;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            color: #303030;
+        }
+
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 2000;
+        }
+
+
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+        }
+
+
+        .brand-font {
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+
+        .text-brand {
+            color: var(--brand-accent);
+        }
+
+
+        .bg-brand-light {
+            background-color: var(--brand-light);
+        }
+
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+
+        .btn-brand {
+            background-color: var(--brand-dark);
+            color: white;
+            border-color: var(--brand-dark);
+        }
+
+
+        .btn-brand:hover,
+        .btn-brand:focus {
+            background-color: var(--brand-accent);
+            color: white;
+            border-color: var(--brand-accent);
+        }
+
+
+        .hero {
+            min-height: 650px;
+            background-color: var(--brand-light);
+        }
+
+
+        .hero-title {
+            font-size: clamp(2.7rem, 7vw, 5rem);
+            line-height: 1.05;
+        }
+
+
+        .profile-placeholder {
+            min-height: 420px;
+            background-color: #e6ddd6;
+        }
+
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+
+        .service-card {
+            transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+        }
+
+
+        footer {
+            background-color: #242828;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =========================================================
+         ACCESSIBILITY SKIP LINK
+         ========================================================= -->
+
+    <a href="#main-content" class="skip-link btn btn-light">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- =========================================================
+         BOOTSTRAP NAVIGATION
+         ========================================================= -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Main navigation">
+
+
+            <div class="container">
+
+
+                <a class="navbar-brand brand-font fs-4" href="#home">
+
+                    Sophie's
+                    <span class="text-brand">
+                        Aesthetics
+                    </span>
+
+                </a>
+
+
+
+                <!--
+                    Bootstrap automatically turns this into
+                    a mobile navigation button.
+                -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+
+                <div class="collapse navbar-collapse" id="mainNavigation">
+
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#about">
+
+                                About
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#services">
+
+                                Services
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#approach">
+
+                                Approach
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#contact">
+
+                                Contact
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item ms-lg-2">
+
+                            <a class="btn btn-brand" href="#contact">
+
+                                Consultation
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <main id="main-content">
+
+
+        <!-- =====================================================
+             HERO
+             Bootstrap grid is used for responsiveness.
+             ===================================================== -->
+
+        <section id="home" class="hero d-flex align-items-center py-5">
+
+
+            <div class="container py-5">
+
+
+                <div class="row align-items-center g-5">
+
+
+                    <div class="col-lg-7">
+
+
+                        <p class="text-brand text-uppercase fw-bold small
+                                  letter-spacing">
+
+                            Nurse-led aesthetic care
+
+                        </p>
+
+
+                        <h1 class="hero-title brand-font mb-4">
+
+                            A considered approach to
+                            <span class="text-brand">
+                                aesthetic care.
+                            </span>
+
+                        </h1>
+
+
+                        <p class="lead text-secondary mb-4">
+
+                            Professional aesthetic consultations and
+                            treatments delivered by a Registered Nurse,
+                            with an emphasis on safety, individual
+                            assessment and natural-looking results.
+
+                        </p>
+
+
+                        <div class="d-flex flex-wrap gap-3">
+
+
+                            <a href="#contact" class="btn btn-brand btn-lg">
+
+                                Request a consultation
+
+                            </a>
+
+
+                            <a href="#services" class="btn btn-outline-dark btn-lg">
+
+                                Explore treatments
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="col-lg-5">
+
+
+                        <aside class="card border-0 shadow-sm" aria-label="Key clinic information">
+
+
+                            <div class="card-body p-4 p-lg-5">
+
+
+                                <p class="text-brand text-uppercase
+                                          fw-bold small">
+
+                                    Clinical care
+
+                                </p>
+
+
+                                <h2 class="brand-font h3 mb-4">
+
+                                    Your consultation comes first.
+
+                                </h2>
+
+
+                                <ul class="list-group list-group-flush">
+
+
+                                    <li class="list-group-item px-0">
+
+                                        Registered Nurse practitioner
+
+                                    </li>
+
+
+                                    <li class="list-group-item px-0">
+
+                                        Individual consultation and
+                                        suitability assessment
+
+                                    </li>
+
+
+                                    <li class="list-group-item px-0">
+
+                                        Personalised treatment planning
+
+                                    </li>
+
+
+                                    <li class="list-group-item px-0">
+
+                                        Aftercare and follow-up support
+
+                                    </li>
+
+
+                                </ul>
+
+
+                            </div>
+
+
+                        </aside>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT
+             ===================================================== -->
+
+        <section id="about" class="py-5">
+
+
+            <div class="container py-5">
+
+
+                <div class="row align-items-center g-5">
+
+
+                    <div class="col-lg-5">
+
+
+                        <div class="profile-placeholder rounded
+                                    d-flex align-items-center
+                                    justify-content-center text-center p-5" role="img"
+                            aria-label="Placeholder for professional photograph of Sophie">
+
+
+                            <div class="text-secondary">
+
+
+                                <h2 class="brand-font h4">
+
+                                    Professional image area
+
+                                </h2>
+
+
+                                <p class="mb-0">
+
+                                    Sophie's photograph can be added here.
+
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="col-lg-7">
+
+
+                        <p class="text-brand text-uppercase
+                                  fw-bold small">
+
+                            About Sophie
+
+                        </p>
+
+
+                        <h2 class="brand-font display-6 mb-4">
+
+                            Clinical experience with a personal approach.
+
+                        </h2>
+
+
+                        <p class="text-secondary">
+
+                            Sophie is a Registered Nurse and GP Practice
+                            Nurse who provides aesthetic treatments
+                            alongside her clinical nursing role.
+
+                        </p>
+
+
+                        <p class="text-secondary">
+
+                            Her approach places consultation, patient
+                            safety and realistic expectations at the
+                            centre of aesthetic care. Each client is
+                            assessed individually before treatment is
+                            considered.
+
+                        </p>
+
+
+                        <p class="text-secondary">
+
+                            The aim is to provide considered treatment
+                            that respects each person's individual
+                            features and goals.
+
+                        </p>
+
+
+
+                        <div class="row g-3 mt-3">
+
+
+                            <div class="col-sm-6">
+
+
+                                <div class="border-start border-3 ps-3">
+
+
+                                    <strong>
+                                        Registered Nurse
+                                    </strong>
+
+
+                                    <div class="text-secondary small">
+                                        Professional clinical background
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-sm-6">
+
+
+                                <div class="border-start border-3 ps-3">
+
+
+                                    <strong>
+                                        GP Practice Nurse
+                                    </strong>
+
+
+                                    <div class="text-secondary small">
+                                        Ongoing patient-facing experience
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-sm-6">
+
+
+                                <div class="border-start border-3 ps-3">
+
+
+                                    <strong>
+                                        Consultation Led
+                                    </strong>
+
+
+                                    <div class="text-secondary small">
+                                        Assessment before treatment
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-sm-6">
+
+
+                                <div class="border-start border-3 ps-3">
+
+
+                                    <strong>
+                                        Aftercare
+                                    </strong>
+
+
+                                    <div class="text-secondary small">
+                                        Support following treatment
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SERVICES
+             Bootstrap Cards + Accordion
+             ===================================================== -->
+
+        <section id="services" class="bg-brand-light py-5">
+
+
+            <div class="container py-5">
+
+
+                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+
+
+                    <p class="text-brand text-uppercase
+                              fw-bold small">
+
+                        Services
+
+                    </p>
+
+
+                    <h2 class="brand-font display-6">
+
+                        Care centred around the individual.
+
+                    </h2>
+
+
+                    <p class="text-secondary">
+
+                        Every treatment pathway begins with a consultation
+                        to discuss goals, relevant medical history and
+                        treatment suitability.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="row g-4">
+
+
+                    <!-- SERVICE 1 -->
+
+                    <div class="col-md-6 col-lg-4">
+
+
+                        <article class="card service-card h-100 border-0 shadow-sm">
+
+
+                            <div class="card-body p-4">
+
+
+                                <span class="badge text-bg-light mb-3">
+
+                                    01 — Consultation
+
+                                </span>
+
+
+                                <h3 class="card-title brand-font h4">
+
+                                    Aesthetic Consultation
+
+                                </h3>
+
+
+                                <p class="card-text text-secondary">
+
+                                    A one-to-one discussion to understand
+                                    your concerns and determine whether
+                                    treatment may be suitable.
+
+                                </p>
+
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- SERVICE 2 -->
+
+                    <div class="col-md-6 col-lg-4">
+
+
+                        <article class="card service-card h-100 border-0 shadow-sm">
+
+
+                            <div class="card-body p-4">
+
+
+                                <span class="badge text-bg-light mb-3">
+
+                                    02 — Treatment
+
+                                </span>
+
+
+                                <h3 class="card-title brand-font h4">
+
+                                    Aesthetic Treatments
+
+                                </h3>
+
+
+                                <p class="card-text text-secondary">
+
+                                    Individually planned aesthetic care
+                                    following appropriate clinical
+                                    assessment and discussion.
+
+                                </p>
+
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- SERVICE 3 -->
+
+                    <div class="col-md-6 col-lg-4">
+
+
+                        <article class="card service-card h-100 border-0 shadow-sm">
+
+
+                            <div class="card-body p-4">
+
+
+                                <span class="badge text-bg-light mb-3">
+
+                                    03 — Aftercare
+
+                                </span>
+
+
+                                <h3 class="card-title brand-font h4">
+
+                                    Follow-up & Aftercare
+
+                                </h3>
+
+
+                                <p class="card-text text-secondary">
+
+                                    Appropriate advice and support
+                                    continue following treatment.
+
+                                </p>
+
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!--
+                    Bootstrap Accordion provides the interactive
+                    show/hide behaviour used in the original app.
+                -->
+
+                <div class="accordion mt-5" id="treatmentAccordion">
+
+
+                    <div class="accordion-item">
+
+
+                        <h3 class="accordion-header">
+
+
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#consultationDetails" aria-expanded="true"
+                                aria-controls="consultationDetails">
+
+                                More about consultations
+
+                            </button>
+
+
+                        </h3>
+
+
+                        <div id="consultationDetails" class="accordion-collapse collapse show"
+                            data-bs-parent="#treatmentAccordion">
+
+
+                            <div class="accordion-body">
+
+                                A consultation provides an opportunity to
+                                discuss goals, medical history and
+                                expectations before making any treatment
+                                decision. There is no obligation to
+                                proceed with treatment.
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+
+                        <h3 class="accordion-header">
+
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#treatmentDetails" aria-expanded="false"
+                                aria-controls="treatmentDetails">
+
+                                More about treatments
+
+                            </button>
+
+
+                        </h3>
+
+
+                        <div id="treatmentDetails" class="accordion-collapse collapse"
+                            data-bs-parent="#treatmentAccordion">
+
+
+                            <div class="accordion-body">
+
+                                Treatment options are discussed according
+                                to individual goals, clinical suitability
+                                and realistic expectations.
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+
+                        <h3 class="accordion-header">
+
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#aftercareDetails" aria-expanded="false"
+                                aria-controls="aftercareDetails">
+
+                                More about aftercare
+
+                            </button>
+
+
+                        </h3>
+
+
+                        <div id="aftercareDetails" class="accordion-collapse collapse"
+                            data-bs-parent="#treatmentAccordion">
+
+
+                            <div class="accordion-body">
+
+                                Clear aftercare information is provided
+                                following treatment, together with
+                                appropriate follow-up support.
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             APPROACH
+             ===================================================== -->
+
+        <section id="approach" class="bg-brand-dark text-white py-5">
+
+
+            <div class="container py-5">
+
+
+                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+
+
+                    <p class="text-uppercase fw-bold small">
+
+                        The approach
+
+                    </p>
+
+
+                    <h2 class="brand-font display-6">
+
+                        Professional care beyond the treatment itself.
+
+                    </h2>
+
+
+                    <p class="text-white-50">
+
+                        Aesthetic treatment should begin with careful
+                        assessment rather than simply selecting a procedure.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-sm-6 col-lg-3">
+
+
+                        <article class="border-top pt-3 h-100">
+
+
+                            <h3 class="brand-font h4">
+
+                                01. Consultation
+
+                            </h3>
+
+
+                            <p class="text-white-50">
+
+                                Discuss goals, concerns, medical history
+                                and expectations.
+
+                            </p>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <div class="col-sm-6 col-lg-3">
+
+
+                        <article class="border-top pt-3 h-100">
+
+
+                            <h3 class="brand-font h4">
+
+                                02. Assessment
+
+                            </h3>
+
+
+                            <p class="text-white-50">
+
+                                Consider suitability, potential benefits,
+                                limitations and relevant risks.
+
+                            </p>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <div class="col-sm-6 col-lg-3">
+
+
+                        <article class="border-top pt-3 h-100">
+
+
+                            <h3 class="brand-font h4">
+
+                                03. Treatment
+
+                            </h3>
+
+
+                            <p class="text-white-50">
+
+                                Proceed with an individually agreed plan
+                                where treatment is appropriate.
+
+                            </p>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <div class="col-sm-6 col-lg-3">
+
+
+                        <article class="border-top pt-3 h-100">
+
+
+                            <h3 class="brand-font h4">
+
+                                04. Aftercare
+
+                            </h3>
+
+
+                            <p class="text-white-50">
+
+                                Receive appropriate aftercare advice and
+                                follow-up support.
+
+                            </p>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT AND FORM
+             ===================================================== -->
+
+        <section id="contact" class="py-5">
+
+
+            <div class="container py-5">
+
+
+                <div class="row g-5">
+
+
+                    <div class="col-lg-5">
+
+
+                        <p class="text-brand text-uppercase
+                                  fw-bold small">
+
+                            Contact
+
+                        </p>
+
+
+                        <h2 class="brand-font display-6 mb-4">
+
+                            Start with a conversation.
+
+                        </h2>
+
+
+                        <p class="text-secondary">
+
+                            Use this demonstration consultation form to
+                            see how the website could support an initial
+                            enquiry.
+
+                        </p>
+
+
+
+                        <div class="mt-4">
+
+
+                            <h3 class="h6">
+                                Consultations
+                            </h3>
+
+
+                            <p class="text-secondary">
+                                By appointment
+                            </p>
+
+
+                            <h3 class="h6">
+                                Clinical approach
+                            </h3>
+
+
+                            <p class="text-secondary">
+                                Consultation and assessment before treatment
+                            </p>
+
+
+                            <h3 class="h6">
+                                Practitioner
+                            </h3>
+
+
+                            <p class="text-secondary">
+                                Sophie — Registered Nurse and GP Practice Nurse
+                            </p>
+
+
+                        </div>
+
+
+
+                        <div class="alert alert-secondary" role="note">
+
+
+                            <strong>
+                                University project:
+                            </strong>
+
+                            This demonstration form does not transmit or
+                            store personal or medical information.
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- FORM -->
+
+                    <div class="col-lg-7">
+
+
+                        <form id="consultation-form" class="bg-light rounded p-4 p-md-5" novalidate>
+
+
+                            <div class="row g-3">
+
+
+                                <!-- NAME -->
+
+                                <div class="col-md-6">
+
+
+                                    <label for="name" class="form-label">
+
+                                        Name
+
+                                    </label>
+
+
+                                    <input type="text" class="form-control" id="name" name="name" autocomplete="name"
+                                        required>
+
+
+                                </div>
+
+
+
+                                <!-- INTEREST -->
+
+                                <div class="col-md-6">
+
+
+                                    <label for="treatment-interest" class="form-label">
+
+                                        Area of interest
+
+                                    </label>
+
+
+                                    <select class="form-select" id="treatment-interest" name="treatment-interest"
+                                        required>
+
+
+                                        <option value="" selected>
+
+                                            Please select
+
+                                        </option>
+
+
+                                        <option value="consultation">
+
+                                            General consultation
+
+                                        </option>
+
+
+                                        <option value="treatment">
+
+                                            Aesthetic treatment
+
+                                        </option>
+
+
+                                        <option value="aftercare">
+
+                                            Aftercare enquiry
+
+                                        </option>
+
+
+                                        <option value="other">
+
+                                            Other
+
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+
+                                <!-- =================================================
+                                     API POSTCODE LOOKUP
+                                     ================================================= -->
+
+                                <div class="col-12">
+
+
+                                    <label for="postcode" class="form-label">
+
+                                        Postcode
+
+                                    </label>
+
+
+                                    <!--
+                                        Bootstrap Input Group
+                                    -->
+
+                                    <div class="input-group">
+
+
+                                        <input type="text" class="form-control" id="postcode" name="postcode"
+                                            autocomplete="postal-code" placeholder="e.g. B14 7RE"
+                                            aria-describedby="postcodeHelp">
+
+
+                                        <button type="button" class="btn btn-outline-dark" id="postcode-button">
+
+                                            Check postcode
+
+                                        </button>
+
+
+                                    </div>
+
+
+                                    <div id="postcodeHelp" class="form-text">
+
+                                        This uses the Postcodes.io API to
+                                        identify the postcode location.
+
+                                    </div>
+
+
+                                    <div id="postcode-result" class="mt-2" aria-live="polite">
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- CONTACT PREFERENCE -->
+
+                                <div class="col-12">
+
+
+                                    <fieldset>
+
+
+                                        <legend class="form-label">
+
+                                            How would you prefer to be contacted?
+
+                                        </legend>
+
+
+
+                                        <div class="form-check form-check-inline">
+
+
+                                            <input class="form-check-input" type="radio" name="contact-method"
+                                                id="contact-email" value="email" checked>
+
+
+                                            <label class="form-check-label" for="contact-email">
+
+                                                Email
+
+                                            </label>
+
+
+                                        </div>
+
+
+
+                                        <div class="form-check form-check-inline">
+
+
+                                            <input class="form-check-input" type="radio" name="contact-method"
+                                                id="contact-phone" value="phone">
+
+
+                                            <label class="form-check-label" for="contact-phone">
+
+                                                Telephone
+
+                                            </label>
+
+
+                                        </div>
+
+
+                                    </fieldset>
+
+
+                                </div>
+
+
+
+                                <!-- EMAIL -->
+
+                                <div class="col-md-6">
+
+
+                                    <label for="email" class="form-label">
+
+                                        Email address
+
+                                    </label>
+
+
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        autocomplete="email" required>
+
+
+                                </div>
+
+
+
+                                <!-- TELEPHONE -->
+
+                                <div class="col-md-6">
+
+
+                                    <label for="telephone" class="form-label">
+
+                                        Telephone number
+
+                                    </label>
+
+
+                                    <input type="tel" class="form-control" id="telephone" name="telephone"
+                                        autocomplete="tel">
+
+
+                                </div>
+
+
+
+                                <!-- CALLBACK TIME -->
+
+                                <div class="col-12 d-none" id="callback-container">
+
+
+                                    <label for="callback-time" class="form-label">
+
+                                        Preferred callback time
+
+                                    </label>
+
+
+                                    <select class="form-select" id="callback-time" name="callback-time">
+
+
+                                        <option value="" selected>
+
+                                            Please select
+
+                                        </option>
+
+
+                                        <option value="morning">
+
+                                            Morning
+
+                                        </option>
+
+
+                                        <option value="afternoon">
+
+                                            Afternoon
+
+                                        </option>
+
+
+                                        <option value="evening">
+
+                                            Evening
+
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+
+                                <!-- MESSAGE -->
+
+                                <div class="col-12">
+
+
+                                    <label for="message" class="form-label">
+
+                                        What would you like to discuss?
+
+                                    </label>
+
+
+                                    <textarea class="form-control" id="message" name="message" rows="5" required
+                                        placeholder="Please avoid entering genuine personal medical information because this is a demonstration website."></textarea>
+
+
+                                </div>
+
+
+
+                                <!-- SUBMIT -->
+
+                                <div class="col-12">
+
+
+                                    <button type="submit" class="btn btn-brand">
+
+                                        Submit consultation request
+
+                                    </button>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- FORM FEEDBACK -->
+
+                            <div id="form-feedback" class="alert alert-success mt-4 d-none" role="status"
+                                aria-live="polite">
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="text-white py-5">
+
+
+        <div class="container">
+
+
+            <div class="row g-4 align-items-center">
+
+
+                <div class="col-md-8">
+
+
+                    <h2 class="brand-font h4">
+
+                        Sophie's Aesthetics
+
+                    </h2>
+
+
+                    <p class="text-white-50 mb-0">
+
+                        Bootstrap framework version created as part of a
+                        university web application project.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="col-md-4 text-md-end">
+
+
+                    <p class="small mb-0">
+
+                        &copy;
+                        <span id="current-year"></span>
+                        Sophie's Aesthetics
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         BOOTSTRAP JAVASCRIPT
+         Required for components such as navbar and accordion.
+         ========================================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+
+
+    <!-- =========================================================
+         OUR JAVASCRIPT
+         ========================================================= -->
+
+    <script>
+
+
+        /* =========================================================
+           CONTACT METHOD DOM FUNCTIONALITY
+           ========================================================= */
+
+
+        const emailOption =
+            document.querySelector("#contact-email");
+
+
+        const phoneOption =
+            document.querySelector("#contact-phone");
+
+
+        const emailInput =
+            document.querySelector("#email");
+
+
+        const telephoneInput =
+            document.querySelector("#telephone");
+
+
+        const callbackContainer =
+            document.querySelector("#callback-container");
+
+
+        const callbackTime =
+            document.querySelector("#callback-time");
+
+
+
+        function updateContactMethod() {
+
+
+            if (phoneOption.checked) {
+
+
+                /*
+                    Bootstrap uses d-none to hide an element.
+                    Remove it when telephone is selected.
+                */
+
+                callbackContainer.classList.remove("d-none");
+
+
+                telephoneInput.required = true;
+
+
+                callbackTime.required = true;
+
+
+                emailInput.required = false;
+
+
+            } else {
+
+
+                callbackContainer.classList.add("d-none");
+
+
+                emailInput.required = true;
+
+
+                telephoneInput.required = false;
+
+
+                callbackTime.required = false;
+
+
+                callbackTime.value = "";
+
+
+            }
+
+
+        }
+
+
+
+        emailOption.addEventListener(
+            "change",
+            updateContactMethod
+        );
+
+
+        phoneOption.addEventListener(
+            "change",
+            updateContactMethod
+        );
+
+
+
+        /* =========================================================
+           JAVASCRIPT API
+           POSTCODES.IO
+           ========================================================= */
+
+
+        const postcodeInput =
+            document.querySelector("#postcode");
+
+
+        const postcodeButton =
+            document.querySelector("#postcode-button");
+
+
+        const postcodeResult =
+            document.querySelector("#postcode-result");
+
+
+
+        postcodeButton.addEventListener(
+            "click",
+            function () {
+
+
+                const postcode =
+                    postcodeInput.value.trim();
+
+
+
+                /*
+                    Clear previous result classes.
+                */
+
+                postcodeResult.className =
+                    "mt-2";
+
+
+                if (postcode === "") {
+
+
+                    postcodeResult.classList.add(
+                        "text-danger"
+                    );
+
+
+                    postcodeResult.textContent =
+                        "Please enter a postcode.";
+
+
+                    return;
+
+
+                }
+
+
+
+                /*
+                    Bootstrap spinner displayed while waiting
+                    for API response.
+                */
+
+                postcodeResult.innerHTML =
+                    '<span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>' +
+                    'Checking postcode...';
+
+
+
+                /*
+                    fetch() requests postcode information from
+                    the external Postcodes.io API.
+                */
+
+                fetch(
+                    "https://api.postcodes.io/postcodes/" +
+                    encodeURIComponent(postcode)
+                )
+
+
+                    .then(function (response) {
+
+
+                        if (!response.ok) {
+
+
+                            throw new Error(
+                                "Postcode not found"
+                            );
+
+
+                        }
+
+
+                        /*
+                            Convert API response to JSON.
+                        */
+
+                        return response.json();
+
+
+                    })
+
+
+                    .then(function (data) {
+
+
+                        const location =
+                            data.result;
+
+
+
+                        const district =
+                            location.admin_district ||
+                            "Unknown district";
+
+
+                        const region =
+                            location.region ||
+                            location.country;
+
+
+
+                        postcodeResult.className =
+                            "alert alert-success mt-3 mb-0";
+
+
+
+                        postcodeResult.textContent =
+                            "Location found: " +
+                            district +
+                            ", " +
+                            region +
+                            ", " +
+                            location.country +
+                            ".";
+
+
+
+                        /*
+                            View the complete JSON response
+                            through the browser developer console.
+                        */
+
+                        console.log(data);
+
+
+                    })
+
+
+                    .catch(function (error) {
+
+
+                        postcodeResult.className =
+                            "alert alert-danger mt-3 mb-0";
+
+
+                        postcodeResult.textContent =
+                            "Postcode could not be found. Please check it and try again.";
+
+
+                        console.error(error);
+
+
+                    });
+
+
+            }
+        );
+
+
+
+        /* =========================================================
+           FORM FUNCTIONALITY
+           ========================================================= */
+
+
+        const consultationForm =
+            document.querySelector("#consultation-form");
+
+
+        const formFeedback =
+            document.querySelector("#form-feedback");
+
+
+
+        consultationForm.addEventListener(
+            "submit",
+            function (event) {
+
+
+                /*
+                    This is a demonstration application,
+                    therefore prevent information being sent.
+                */
+
+                event.preventDefault();
+
+
+
+                /*
+                    Use built-in HTML form validation.
+                */
+
+                if (!consultationForm.checkValidity()) {
+
+
+                    consultationForm.reportValidity();
+
+
+                    return;
+
+
+                }
+
+
+
+                formFeedback.classList.remove(
+                    "d-none"
+                );
+
+
+                formFeedback.textContent =
+                    "Thank you. Your demonstration consultation request has been completed successfully. No information has been transmitted or stored.";
+
+
+
+                consultationForm.reset();
+
+
+
+                postcodeResult.textContent = "";
+
+
+                postcodeResult.className =
+                    "mt-2";
+
+
+                updateContactMethod();
+
+
+            }
+        );
+
+
+
+        /*
+            Hide the previous success message when the user
+            starts entering another enquiry.
+        */
+
+        consultationForm.addEventListener(
+            "input",
+            function () {
+
+
+                formFeedback.classList.add(
+                    "d-none"
+                );
+
+
+                formFeedback.textContent = "";
+
+
+            }
+        );
+
+
+
+        /* =========================================================
+           AUTOMATIC COPYRIGHT YEAR
+           ========================================================= */
+
+
+        const currentYear =
+            document.querySelector("#current-year");
+
+
+        currentYear.textContent =
+            new Date().getFullYear();
+
+
+
+        /*
+            Set correct form behaviour when the page loads.
+        */
+
+        updateContactMethod();
+
+
+    </script>
+
+
+</body>
+
+</html>
